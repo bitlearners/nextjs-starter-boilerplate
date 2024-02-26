@@ -1,7 +1,7 @@
 // src/pages/blog/tag/[slug].jsx
 import { getPostsByTag } from "@/lib/data";
 
-import Sidebar from "@/components/sidebar/sidebar"
+import Sidebar from "@/components/sidebar/Sidebar"
 import PostCard from "@/components/postcard/postCard"
 const TagPage = async ({ params }) => {
   try {

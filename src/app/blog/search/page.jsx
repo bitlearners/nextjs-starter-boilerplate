@@ -1,14 +1,14 @@
 // src/pages/blog/tag/[slug].jsx
-import { getPostsByCate } from "@/lib/data";
+import { getPost } from "@/lib/data";
 
 import Sidebar from "@/components/sidebar/Sidebar"
 import PostCard from "@/components/postcard/postCard"
-const CategoryPage = async ({ params }) => {
+const SearchPage = async ({ params }) => {
   try {
     const { slug } = params;
 
     // Fetch posts by tag
-    const posts = await getPostsByCate(slug);
+    const posts = await getPost(slug);
 
     if (!posts || posts.length === 0) {
       C
@@ -66,4 +66,4 @@ const CategoryPage = async ({ params }) => {
   }
 };
 
-export default CategoryPage;
+export default SearchPage;
